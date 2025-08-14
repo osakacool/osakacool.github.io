@@ -1,0 +1,1 @@
+# osakacool.github.io
