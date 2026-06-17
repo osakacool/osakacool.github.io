@@ -1,0 +1,25 @@
+Feature ID,Feature Name,Biochemical Role / Pathway,Unit,Raw Missing Rate (%),Derived Missing Rate (%),Derivation / Preprocessing Method
+Met_P_01,Sucrose_umol_gFW,"Primary transport sugar, energy signaling",¦Ìmol/g FW,28.4,0,GPR Upsampling (circadian kernel) + MLP Imputation (Eq. 17)
+Met_P_02,Glucose_umol_gFW,"Hexose sugar, glycolysis substrate",¦Ìmol/g FW,25.1,0,GPR Upsampling + MLP Imputation (Eq. 17)
+Met_P_03,Fructose_umol_gFW,"Hexose sugar, osmotic regulation",¦Ìmol/g FW,26.8,0,GPR Upsampling + MLP Imputation (Eq. 17)
+Met_P_04,Starch_mg_gFW,Primary carbon storage polymer,mg/g FW,31.5,0,GPR Upsampling (diurnal decay/growth cycle modeled)
+Met_P_05,Malate_umol_gFW,"TCA cycle intermediate, stomatal regulation",¦Ìmol/g FW,22.3,0,GPR Upsampling + MLP Imputation (Eq. 17)
+Met_P_06,Citrate_umol_gFW,TCA cycle intermediate,¦Ìmol/g FW,29.7,0,GPR Upsampling + MLP Imputation (Eq. 17)
+Met_P_07,Fumarate_umol_gFW,TCA cycle intermediate,¦Ìmol/g FW,33.2,0,GPR Upsampling + MLP Imputation (Eq. 17)
+Met_P_08,Glutamate_umol_gFW,"Amino acid, nitrogen metabolism hub",¦Ìmol/g FW,19.8,0,GPR Upsampling + MLP Imputation (.17)
+Met_P_09,Aspartate_umol_gFW,"Amino acid, TCA cycle anaplerosis",¦Ìmol/g FW,21.4,0,GPR Upsampling + MLP Imputation (Eq. 17)
+Met_P_10,GABA_umol_gFW,"Neurotransmitter analog, stress response",¦Ìmol/g FW,38.6,0,Heavy MLP Imputation (Eq. 17) due to high LOD frequency
+Met_P_11,Proline_umol_gFW,"Osmoprotectant, drought stress marker",¦Ìmol/g FW,24.5,0,GPR Upsampling + MLP Imputation (Eq. 17)
+Met_P_12,Alanine_umol_gFW,"Amino acid, photorespiration byproduct",¦Ìmol/g FW,27.1,0,GPR Upsampling + MLP Imputation (Eq. 17)
+Met_P_13,T6P_umol_gFW,"Trehalose-6-phosphate, sucrose signaling molecule",¦Ìmol/g FW,42.3,0,Targeted heavy MLP Imputation (Eq. 17) due to low abundance
+Met_P_14,Raffinose_umol_gFW,"Galactosyl-sucrose, cold/drought protectant",¦Ìmol/g FW,35.8,0,GPR Upsampling + MLP Imputation (Eq. 17)
+Met_P_15,Myo_inositol_umol_gFW,"Sugar alcohol, membrane lipid precursor",¦Ìmol/g FW,30.2,0,GPR Upsampling + MLP Imputation (Eq.
+Met_P_16,Shikimate_umol_gFW,Precursor for aromatic amino acids & phenylpropanoids,¦Ìmol/g FW,36.4,0,GPR Upsampling + MLP Imputation (Eq. 17)
+Met_P_17,Pyruvate_umol_gFW,"Glycolysis end-product, metabolic hub",¦Ìmol/g FW,28.9,0,GPR Upsampling + MLP Imputation (Eq. 17)
+Met_P_18,2OG_umol_gFW,"2-Oxoglutarate, TCA cycle & nitrogen assimilation",¦Ìmol/g FW,32.1,0,GPR Upsampling + MLP Imputation (Eq. 17)
+Met_P_19,PEP_umol_gFW,"Phosphoenolpyruvate, glycolysis/shikimate precursor",¦Ìmol/g FW,39.5,0,Heavy MLP Imputation (Eq. 17) due to instability
+Met_P_20,ATP_umol_gFW,Primary energy currency,¦Ìmol/g FW,41.2,0,Heavy MLP Imputation (Eq. 17) due to rapid degradation
+Met_P_21,NADH_umol_gFW,Redox cofactor,¦Ìmol/g FW,45.6,0,Heavy MLP Imputation (Eq. 17) due to high oxidation rate
+Met_P_22,Acetyl_CoA_umol_gFW,Central metabolic intermediate,¦Ìmol/g FW,43.8,0,Heavy MLP Imputation (Eq. 17)
+Met_P_23,Nitrate_umol_gFW,Primary inorganic nitrogen source,¦Ìmol/g FW,15.3,0,Ion chromatography + GPR smoothing
+Met_P_24,Ammonium_umol_gFW,"Reduced nitrogen form, toxic at high levels",¦Ìmol/g FW,22.7,0,Ion chromatography + GPR smoothing

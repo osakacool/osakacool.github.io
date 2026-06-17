@@ -1,0 +1,33 @@
+Feature ID,Feature Name,Biochemical Role / Pathway,Unit,Raw Missing Rate (%),Derived Missing Rate (%),Derivation / Preprocessing Method
+Met_S_01,ABA_ng_gFW,"Abscisic acid, drought/stress hormone",ng/g FW,34.5,0,GPR Upsampling (stress-event kernel) + MLP Imputation
+Met_S_02,IAA_ng_gFW,"Indole-3-acetic acid (Auxin), cell elongation",ng/g FW,38.2,0,GPR Upsampling + MLP Imputation
+Met_S_03,SA_ng_gFW,"Salicylic acid, pathogen defense signaling",ng/g FW,41.6,0,Heavy MLP Imputation due to sporadic accumulation
+Met_S_04,JA_Ile_ng_gFW,"Jasmonoyl-isoleucine, herbivore/wounding response",ng/g FW,44.3,0,Heavy MLP Imputation due to sporadic accumulation
+Met_S_05,GA3_ng_gFW,"Gibberellic acid, stem elongation & seed germination",ng/g FW,39.8,0,GPR Upsampling + MLP Imputation
+Met_S_06,BR_ng_gFW,"Brassinosteroid, cell expansion & photomorphogenesis",ng/g FW,46.1,0,Heavy MLP Imputation (ultra-low abundance)
+Met_S_07,Quercetin_3G_umol_gFW,"Flavonol glycoside, UV protection & antioxidant",¦Ìmol/g FW,32.4,0,GPR Upsampling + MLP Imputation
+Met_S_08,Kaempferol_3G_umol_gFW,"Flavonol glycoside, stress adaptation",¦Ìmol/g FW,33.1,0,GPR Upsampling + MLP Imputation
+Met_S_09,Cyanidin_3G_umol_gFW,"Anthocyanin precursor, light stress response",¦Ìmol/g FW,37.5,0,GPR Upsampling + MLP Imputation
+Met_S_10,Rutin_umol_gFW,"Flavonoid glycoside, vascular development",¦Ìmol/g FW,35.8,0,GPR Upsampling + MLP Imputation
+Met_S_11,Chlorogenic_acid_umol_gFW,"Phenylpropanoid, cell wall lignification precursor",¦Ìmol/g FW,29.6,0,GPR Upsampling + MLP Imputation
+Met_S_12,Caffeic_acid_umol_gFW,Phenylpropanoid intermediate,¦Ìmol/g FW,31.2,0,GPR Upsampling + MLP Imputation
+Met_S_13,Ferulic_acid_umol_gFW,Cell wall cross-linking phenolic acid,¦Ìmol/g FW,30.8,0,GPR Upsampling + MLP Imputation
+Met_S_14,Sinapic_acid_umol_gFW,"Phenylpropanoid, UV-B screening",¦Ìmol/g FW,34.9,0,GPR Upsampling + MLP Imputation
+Met_S_15,Glucoerucin_umol_gFW,"Aliphatic glucosinolate, herbivore defense",¦Ìmol/g FW,40.2,0,Heavy MLP Imputation (genotype-dependent expression)
+Met_S_16,Glucoraphanin_umol_gFW,"Aliphatic glucosinolate, precursor to sulforaphane",¦Ìmol/g FW,38.7,0,Heavy MLP Imputation
+Met_S_17,Glucobrassicin_umol_gFW,"Indolic glucosinolate, pathogen defense",¦Ìmol/g FW,42.5,0,Heavy MLP Imputation
+Met_S_18,Campesterol_mg_gFW,"Phytosterol, brassinosteroid precursor",mg/g FW,36.4,0,GPR Upsampling + MLP Imputation
+Met_S_19,Sitosterol_mg_gFW,Major membrane phytosterol,mg/g FW,28.9,0,GPR Upsampling + MLP Imputation
+Met_S_20,Tocopherol_mg_gFW,"Vitamin E, lipid peroxidation protector",mg/g FW,33.5,0,GPR Upsampling + MLP Imputation
+Met_S_21,Carotenoids_mg_gFW,"Photosynthetic pigments, ROS scavengers",mg/g FW,25.3,0,Spectrophotometric anchor + GPR smoothing
+Met_S_22,Anthocyanins_mg_gFW,"Vacuolar pigments, high-light/cold stress markers",mg/g FW,31.7,0,Spectrophotometric anchor + GPR smoothing
+Met_S_23,Lignin_mg_gFW,"Structural polymer, secondary cell wall",mg/g FW,18.4,0,Destructive anchor points + ODE-based growth curve fitting
+Met_S_24,Suberin_mg_gFW,"Lipid polymer, root/cork barrier",mg/g FW,45.2,0,Heavy MLP Imputation (rarely sampled)
+Met_S_25,Salicylic_acid_glucoside_umol_gFW,SA storage/detoxification form,¦Ìmol/g FW,43.1,0,Heavy MLP Imputation
+Met_S_26,Zeatin_ng_gFW,"Cytokinin, cell division promoter",ng/g FW,47.8,0,Heavy MLP Imputation (ultra-low abundance)
+Met_S_27,Isopentenyl_adenine_ng_gFW,Cytokinin precursor,ng/g FW,49.2,0,Heavy MLP Imputation (ultra-low abundance)
+Met_S_28,Strigolactone_ng_gFW,"Root exudate, mycorrhizal signaling",ng/g FW,52.4,0,"Extreme MLP Imputation (root-specific, highly sparse)"
+Met_S_29,Ethylene_precursor_ACC_umol_gFW,1-aminocyclopropane-1-carboxylic acid,¦Ìmol/g FW,39.6,0,GPR Upsampling + MLP Imputation
+Met_S_30,Glutathione_GSH_umol_gFW,Major cellular antioxidant,¦Ìmol/g FW,27.3,0,GPR Upsampling + MLP Imputation
+Met_S_31,Glutathione_GSSG_umol_gFW,"Oxidized glutathione, redox state indicator",¦Ìmol/g FW,35.8,0,GPR Upsampling + MLP Imputation
+Met_S_32,Ascorbate_umol_gFW,"Vitamin C, major water-soluble antioxidant",¦Ìmol/g FW,24.1,0,GPR Upsampling + MLP Imputation
