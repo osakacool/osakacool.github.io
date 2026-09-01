@@ -1,0 +1,1 @@
+pip install numpy pandas torch torch-geometric stable-baselines3 matplotlib seaborn scipy
