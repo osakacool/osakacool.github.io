@@ -1,0 +1,26 @@
+# Liquid‑Mamba: Research on the Plasticity of Students' Emotional States and the Mechanism of Psychological Growth in Music Classes
+Paper: Research on the Plasticity of Students' Emotional States and the Mechanism of Psychological Growth in Music Classes Based on Liquid‑Mamba Hybrid Neural Network
+
+## Environment
+pip install -r requirements.txt
+
+## Dataset
+Social‑Emotional Music (SEM) dataset: https://www.kaggle.com/datasets/xeowayeh/social-emotional-music
+1. Raw audio → extract log‑mel spectrogram features
+2. Binarize label with threshold=3.5 (1‑5 score)
+3. 5‑fold stratified cross‑validation by student ID
+
+## Run
+1. Preprocess dataset: python data_preprocess.py
+2. Train full Liquid‑Mamba: python train.py
+3. Run ablation experiments: python ablation_run.py
+4. Draw all figures(Fig1‑Fig4): python plot_figures.py
+
+## File Description
+- liquid_mamba_model.py: LTC module, Liquid‑Mamba full model
+- data_preprocess.py: audio feature extraction, dataset construction
+- metrics.py: AUC‑ROC,ExactMatch,HammingLoss,QWK,Spearman rank correlation
+- train.py: main training loop, optimizer, loss function
+- ablation_run.py: ablation study scripts
+- plot_figures.py: Figure1‑Figure4 independent plotting code
+- pseudo_code.md: algorithm pseudo‑code

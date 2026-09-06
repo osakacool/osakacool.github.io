@@ -1,0 +1,49 @@
+# Algorithm Pseudo‑Code for Liquid‑Mamba
+## Algorithm 1 Liquid‑Mamba Forward Pass
+Input: Acoustic feature sequence X ∈ R^{T × d}
+Output: SEL prediction probability ŷ ∈ R^3
+
+# Step1 Liquid Time‑Constant(LTC) front‑end
+Initialize hidden state h_0
+for t ← 1 to T do
+    # ODE: dh/dt = -(1/τ + f(x_t,h_t)) ⊙ h_t + g(x_t,h_t)
+    h_t ← RK4_solve(ODE_func, h_{t‑1}, x_t, Δt=0.1)
+end for
+H = [h_1,h_2,...,h_T] # LTC output embedding sequence
+
+# Step2 Mamba selective state‑space back‑end
+s_0 ← zeros()
+for t ←1 to T do
+    Δ_t = softplus(WΔ @ h_t + bΔ)
+    B_t = WB @ h_t + bB
+    C_t = WC @ h_t + bC
+    Ā_t = expm(Δ_t * A_hippo)
+    B̄_t = zero_order_hold(B_t, Δ_t)
+    s_t = Ā_t @ s_{t‑1} + B̄_t @ h_t
+    y_t = C_t @ s_t
+end for
+
+# Temporal aggregation
+z = mean(y_1...y_T)
+
+# Classification head for 3 SEL tasks
+ŷ_empathy = σ(w_e^T z + b_e)
+ŷ_outlook = σ(w_o^T z + b_o)
+ŷ_problem = σ(w_p^T z + b_p)
+return [ŷ_empathy, ŷ_outlook, ŷ_problem]
+
+## Algorithm2 Training Objective
+Input: Dataset D={(X^{(i)},Y^{(i)})}, Y ∈ {0,1}^3
+Loss = 0
+for each batch sample (X,Y) in D:
+    Ŷ = Liquid_Mamba(X)
+    loss_batch = Σ_{c∈{emp,out,prob}} BCE(Y_c, Ŷ_c)
+    Loss += loss_batch
+end for
+Loss = Loss / N
+Backprop using adjoint sensitivity method for ODE gradients
+Update parameters θ_f,θ_g,Mamba_proj,classification_head via Adam
+
+## Algorithm3 Ordinal & Continuous Auxiliary Loss
+If ordinal regression branch: loss_ord = CumulativeLinkLoss(raw_score 1‑5)
+If continuous regression branch: loss_reg = MSE(pred_score, raw_score)
