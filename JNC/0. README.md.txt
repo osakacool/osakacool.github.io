@@ -1,0 +1,9 @@
+# Code for: A Physical‑Data Dual‑Driven Framework for Non‑Market Valuation of Ecosystem Services: Integrating Mamba Neural Operator with Physics‑Informed Neural Networks (PINN)
+## Journal Submission Reproducible Code
+
+### Environment
+- Python: 3.10.14
+- GPU: NVIDIA A100 80GB (recommended; CPU fallback supported)
+- Install dependencies:
+```bash
+pip install -r requirements.txt
