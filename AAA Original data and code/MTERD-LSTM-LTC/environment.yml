@@ -1,0 +1,9 @@
+name: mterd-lstm-ltc
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip
+  - libsndfile
+  - pip:
+    - -r requirements.txt

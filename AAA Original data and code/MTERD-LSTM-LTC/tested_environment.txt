@@ -1,0 +1,11 @@
+Python 3.12.14
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+scikit-learn==1.8.0
+joblib==1.5.3
+torch==2.15.0+cpu
+matplotlib==3.10.8
+opensmile==2.6.0
+soundfile==0.14.0
+kagglehub==1.0.3

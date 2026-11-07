@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Cite the associated manuscript when using this implementation."
+title: "Multi-scale Auditory Psychological Temporal Analysis Quantifying Emotional Regulation in Music Therapy via LSTM-LTC Modeling"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Linxi
+  - family-names: Zhang
+    given-names: Jialu
+  - family-names: Zhan
+    given-names: Zitong
+version: 0.1.0
+abstract: "Equation-based implementation prepared from the supplied manuscript."
